@@ -7,6 +7,7 @@ void main() {
       appBar: AppBar(
         title: Text("Helloflutter "),
       ),
+      body: Text("เป็นไงบ้างครับ"),
     ),
   );
   runApp(app);
