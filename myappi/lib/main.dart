@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var app = MaterialApp(
-    title: "my App",
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("Helloflutter "),
+  runApp(Myappi());
+}
+
+//สร้าง  Widget
+class Myappi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "my App",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Helloflutter "),
+        ),
+        body: Text("เป็นไงบ้างครับ"),
       ),
-      body: Text("เป็นไงบ้างครับ"),
-    ),
-    theme: ThemeData(primarySwatch: Colors.orange),
-  );
-  runApp(app);
+      theme: ThemeData(primarySwatch: Colors.orange),
+    );
+  }
 }
