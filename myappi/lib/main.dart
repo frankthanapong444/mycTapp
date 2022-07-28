@@ -15,10 +15,9 @@ class Myappi extends StatelessWidget {
           title: Text("Hello Mother Fuckker!!!!"),
         ),
         body: Center(
-          child: Text(
-            "Hello MTF",
-            style: TextStyle(fontSize: 35, color: Colors.green),
-          ),
+          child: Image(
+              image:
+                  NetworkImage("https://www.thaipost.net/main/detail/33483")),
         ),
       ),
       theme: ThemeData(primarySwatch: Colors.orange),
