@@ -23,8 +23,15 @@ class Myhomepage extends StatefulWidget {
 
 class _MyhomepageState extends State<Myhomepage> {
   int number = 0; //สร้าง state
+
   @override
   Widget build(BuildContext context) {
+    List<Widget> data = [];
+    data.add(Text("กดเพื่อเพิ่มจำนวน"));
+    data.add(Text(
+      number.toString(),
+      style: TextStyle(fontSize: 60),
+    ));
     return Scaffold(
       appBar: AppBar(
         title: Text("Hello My Friend"),
@@ -32,16 +39,7 @@ class _MyhomepageState extends State<Myhomepage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("HELLO"),
-            Text("am Frank"),
-            Text("Freedom diary"),
-            Text("กดปุ่มเพื่อเพิ่มจำนวน"),
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 60),
-            )
-          ],
+          children: data,
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -52,6 +50,7 @@ class _MyhomepageState extends State<Myhomepage> {
   }
 
   void addNumber() {
+    //function addNumBer ใช้กับด้านบน
     setState(() {
       number++;
     });
