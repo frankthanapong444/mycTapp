@@ -10,18 +10,30 @@ class Myappi extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "my App",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hello Mother Fuckker!!!!"),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text("HELLO"), Text("AM Frank"), Text("Freedom diary")],
-          ),
+      home: Myhomepage(),
+      theme: ThemeData(primarySwatch: Colors.orange),
+    );
+  }
+}
+
+class Myhomepage extends StatefulWidget {
+  @override
+  State<Myhomepage> createState() => _MyhomepageState();
+}
+
+class _MyhomepageState extends State<Myhomepage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Hello My Friend"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [Text("HELLO"), Text("AM Frank"), Text("Freedom diary")],
         ),
       ),
-      theme: ThemeData(primarySwatch: Colors.orange),
     );
   }
 }
