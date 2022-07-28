@@ -23,35 +23,27 @@ class Myhomepage extends StatefulWidget {
 }
 
 class _MyhomepageState extends State<Myhomepage> {
-  //กลุ่มข้อมูล
-  List<FoodMenu> menu = [
-    FoodMenu("หอยทอด", "150", "assets/image/image1.jpg"),
-    FoodMenu("ต้มยำกุ้ง", "200", "assets/image/image3.jpg"),
-    FoodMenu("มาม่า", "59", "assets/image/image2.jpg")
-  ];
-
-//แสดงผลข้อมูล
+  //แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("เลือกเมนูที่ต้องการเลย"),
+          title: Text("บัญชีของฉัน"),
         ),
-        body: ListView.builder(
-            itemCount: menu.length,
-            itemBuilder: (BuildContext context, int index) {
-              FoodMenu food = menu[index];
-              return ListTile(
-                leading: Image.asset(food.img),
-                title: Text(food.name),
-                subtitle: Text(
-                  "ราคา" + food.price + "บาท",
-                  style: TextStyle(fontSize: 10),
-                ),
-                onTap: () {
-                  print("You choose the menu = " + food.name);
-                },
-              );
-            }));
+        body: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(200)),
+              height: 50,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(100)),
+              height: 100,
+            )
+          ],
+        ));
   }
 }
