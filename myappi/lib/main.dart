@@ -31,7 +31,7 @@ class _MyhomepageState extends State<Myhomepage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("HELLO"), Text("AM Frank"), Text("Freedom diary")],
+          children: [Text("HELLO"), Text("am Frank"), Text("Freedom diary")],
         ),
       ),
     );
