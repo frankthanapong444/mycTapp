@@ -24,39 +24,26 @@ class Myhomepage extends StatefulWidget {
 class _MyhomepageState extends State<Myhomepage> {
   int number = 0; //สร้าง state
 
+//แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
-    List<Widget> data = [];
-    data.add(Text("กดเพื่อเพิ่มจำนวน"));
-    data.add(Text(
-      number.toString(),
-      style: TextStyle(fontSize: 60),
-    ));
-    data.add(Text("FREEDO<"));
-    for (var i = 0; i < 10; i++) {
-      data.add(Text("FRANK $i "));
-    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Hello My Friend"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: data,
+        child: ListView(
+          children: getData(17),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addNumber,
-        child: Text("Push"),
       ),
     );
   }
 
-  void addNumber() {
-    //function addNumBer ใช้กับด้านบน
-    setState(() {
-      number++;
-    });
+  List<Widget> getData(int count) {
+    List<Widget> data = [];
+    for (var i = 0; i < count; i++) {
+      data.add(Text("FRANK $i "));
+    }
+    return data;
   }
 }
