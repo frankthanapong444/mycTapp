@@ -25,10 +25,9 @@ class Myhomepage extends StatefulWidget {
 class _MyhomepageState extends State<Myhomepage> {
   //กลุ่มข้อมูล
   List<FoodMenu> menu = [
-    FoodMenu("กุ้งย่าง", "500"),
-    FoodMenu("ข้าวผัด", "100"),
-    FoodMenu("หอยทอด", "150"),
-    FoodMenu("ต้มยำกุ้ง", "200")
+    FoodMenu("หอยทอด", "150", "astes/image/image1.jpg"),
+    FoodMenu("ต้มยำกุ้ง", "200", "astes/image/image2.jpg"),
+    FoodMenu("มาม่า", "59", "astes/image/image3.jpg")
   ];
 
 //แสดงผลข้อมูล
@@ -43,6 +42,7 @@ class _MyhomepageState extends State<Myhomepage> {
             itemBuilder: (BuildContext context, int index) {
               FoodMenu food = menu[index];
               return ListTile(
+                leading: Image.asset(food.img),
                 title: Text(food.name),
                 subtitle: Text(
                   "ราคา" + food.price + "บาท",
