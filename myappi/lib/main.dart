@@ -16,7 +16,7 @@ class Myappi extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [Text("HELLO"), Text("AM Frank"), Text("Freedom diary")],
           ),
         ),
