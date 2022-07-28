@@ -15,9 +15,10 @@ class Myappi extends StatelessWidget {
           title: Text("Hello Mother Fuckker!!!!"),
         ),
         body: Center(
-          child: Image(
-              image:
-                  NetworkImage("https://www.thaipost.net/main/detail/33483")),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text("HELLO"), Text("AM Frank"), Text("Freedom diary")],
+          ),
         ),
       ),
       theme: ThemeData(primarySwatch: Colors.orange),
