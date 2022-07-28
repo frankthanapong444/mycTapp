@@ -33,7 +33,7 @@ class _MyhomepageState extends State<Myhomepage> {
       ),
       body: Center(
         child: ListView(
-          children: getData(17),
+          children: getData(10),
         ),
       ),
     );
@@ -42,7 +42,17 @@ class _MyhomepageState extends State<Myhomepage> {
   List<Widget> getData(int count) {
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text("FRANK $i "));
+      var menu = ListTile(
+        title: Text(
+          "FRANK ${i + 1}",
+          style: TextStyle(fontSize: 15),
+        ),
+        subtitle: Text(
+          "sub ${i + 1}",
+          style: TextStyle(fontSize: 10),
+        ),
+      );
+      data.add(menu);
     }
     return data;
   }
