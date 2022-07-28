@@ -4,7 +4,7 @@ void main() {
   runApp(Myappi());
 }
 
-//สร้าง  Widget
+//build Widget
 class Myappi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,9 +12,11 @@ class Myappi extends StatelessWidget {
       title: "my App",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Helloflutter "),
+          title: Text("Hello Mother Fuckker!!!!"),
         ),
-        body: Text("เป็นไงบ้างครับ"),
+        body: Center(
+          child: Text("Hello MTF"),
+        ),
       ),
       theme: ThemeData(primarySwatch: Colors.orange),
     );
