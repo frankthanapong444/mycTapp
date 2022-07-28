@@ -32,6 +32,10 @@ class _MyhomepageState extends State<Myhomepage> {
       number.toString(),
       style: TextStyle(fontSize: 60),
     ));
+    data.add(Text("FREEDO<"));
+    for (var i = 0; i < 10; i++) {
+      data.add(Text("FRANK $i "));
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Hello My Friend"),
