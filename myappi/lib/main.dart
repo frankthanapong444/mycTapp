@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'FOODmenu.dart';
 
 void main() {
   runApp(Myappi());
@@ -28,30 +27,57 @@ class _MyhomepageState extends State<Myhomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("บัญชีของฉัน"),
+          title: Text(
+            "บัญชีของฉัน",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               Container(
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-              ),
+                  padding: const EdgeInsets.all(50.0),
+                  decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(10)),
+                  height: 150,
+                  child: Row(
+                    children: [
+                      Text(
+                        "ยอดคงเหลือ",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "2,000,000",
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                      )
+                    ],
+                  )),
               Container(
-                decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.redAccent,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-              )
+                  padding: const EdgeInsets.all(50.0),
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10)),
+                  height: 150,
+                  child: Row(
+                    children: [
+                      Text(
+                        "รายรับ",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "1,000,000",
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                      )
+                    ],
+                  )),
             ],
           ),
         ));
