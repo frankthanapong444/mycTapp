@@ -1,62 +1,13 @@
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(Myappi());
+void main() async {
+  print(await loginUser());
+  print("ทำงานอื่น");
 }
 
-//build Widget
-class Myappi extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "my App",
-      home: Myhomepage(),
-      theme: ThemeData(primarySwatch: Colors.orange),
-    );
-  }
+Future<String> loginUser() async {
+  var user = await getUserFromDatabase();
+  return "ชื่อผู้ใช้คือ" + user;
 }
 
-class Myhomepage extends StatefulWidget {
-  @override
-  State<Myhomepage> createState() => _MyhomepageState();
-}
-
-class _MyhomepageState extends State<Myhomepage> {
-  int number = 0;
-  //แสดงผลข้อมูล
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    print("เรียกใช้งาน initstate");
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    print("เรียกใช้งาน build");
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "บัญชีของฉัน",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: Column(
-        children: [
-          Text(
-            number.toString(),
-            style: TextStyle(fontSize: 30),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-        },
-        child: Icon(Icons.add),
-      ),
-    );
-  }
+Future<String> getUserFromDatabase() {
+  return Future.delayed(Duration(seconds: 10), () => "FRANK");
 }
