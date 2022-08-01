@@ -22,6 +22,7 @@ class Myhomepage extends StatefulWidget {
 }
 
 class _MyhomepageState extends State<Myhomepage> {
+  int number = 0;
   //แสดงผลข้อมูล
   @override
   void initState() {
@@ -34,12 +35,28 @@ class _MyhomepageState extends State<Myhomepage> {
   Widget build(BuildContext context) {
     print("เรียกใช้งาน build");
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "บัญชีของฉัน",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+      appBar: AppBar(
+        title: Text(
+          "บัญชีของฉัน",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        body: Container());
+      ),
+      body: Column(
+        children: [
+          Text(
+            number.toString(),
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            number++;
+          });
+        },
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }
